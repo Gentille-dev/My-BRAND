@@ -1,0 +1,83 @@
+header{
+    background: rgb(0, 7, 7);
+    height: 60px;
+}
+.admin-wrapper{
+    display: flex;
+    height: calc(100% - 60px);
+}
+.admin-wrapper .leftside-bar{
+flex: 3;
+height: 600px;
+border: 2px solid rgb(226, 218, 169);
+background: rgb(147, 166, 252);
+}
+.admin-wrapper .leftside-bar ul{
+    list-style: none;
+    margin: 20px;
+    padding: 20px;
+    color: rgb(226, 222, 222);
+}
+.admin-wrapper .leftside-bar ul li a {
+    padding: 10px;
+    text-decoration: none;
+    color: #1d0435;
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+    border-bottom:  1px solid rgb(120, 129, 211);
+}
+.admin-wrapper .leftside-bar ul li a:hover {
+    background: rgb(95, 95, 228);
+}
+.admin-wrapper .admin-content{
+    flex: 8;
+    height: 600px;
+    border: 2px solid rgb(86, 44, 110);
+    padding: 40px 80px 80px;
+    overflow-y: scroll;
+    }
+    .btn-big{
+        padding: 10px;
+        height: 40px;
+        width: 100px;
+        background-color: rgb(147, 184, 248);
+        color: rgb(53, 46, 46);
+        border-radius: 5px;
+    }
+
+    .admin-content .page-title{
+        text-align: center;
+        margin-bottom: 20px;
+        color: rgb(26, 24, 48);
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1.1rem;
+    }
+    th, td{
+        padding: 15px;
+        text-align: left;
+        border-bottom: 2px solid rgb(103, 132, 175);
+    }
+    .edit{
+        color: rgb(10, 204, 98);
+    }
+    .delete{
+        color: rgb(233, 41, 41);
+    }
+    .post{
+        color: rgb(20, 23, 241);
+    }
+    .edit:hover,
+    .delete:hover,
+    .post:hover {
+  text-decoration: underline;
+    }
+
+    form div{
+        margin-bottom: 15px;
+        
+    }
+    

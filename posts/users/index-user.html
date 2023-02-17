@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---------------GOOGLE FONTS POPPINS-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+    </style>
+
+    <!-------------CUSTOM STYLING-->
+    <link rel="stylesheet" href="../../../posts/css/styles.css">
+    <link rel="stylesheet" href="../../../posts/css/admin.css">
+
+    <title>Admin users</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text"> <span>Admin</span> Dashboard</h1>
+        </div>
+    </header>
+
+    <div class="admin-wrapper">
+        <!-------------LEFT SIDE BAR-->
+        <div class="leftside-bar">
+            <ul>
+                <li> <a href="../../../posts/index.html"> Post Management</a> </li> <br>
+                <li> <a href="index.html"> User Management</a> </li> <br>
+                <li> <a href="./topics/index.html"> Topic Management</a> </li>
+            </ul>
+        </div>
+        <!-------------RIGHT SIDE BAR-->
+
+
+
+        <!-------------ADMIN CONTENT-->
+        <div class="admin-content">
+            <div class="button-group">
+                <a href="../users/createUser.html" class="btn-big"> Add User</a>
+                <a href="../../../posts/index.html" class="btn-big">Manage User</a>
+            </div>
+            <br>
+            <div class="content">
+                <h2 class="page-title">Manage Users</h2>
+                <br>
+                <table>
+                    <thead>
+                        <th>SN</th>
+                        <th>Username</th>
+                        <th>User Role</th>
+                        <th colspan="2">Action</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Gentille</td>
+                            <td>Admin</td>
+                            <td > <a href="#" class="edit">Edit</a></td>
+                            <td > <a href="#" class="delete">Delete</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Zayn</td>
+                            <td>Standard</td>
+                            <td > <a href="#" class="edit">Edit</a></td>
+                            <td > <a href="#" class="delete">Delete</a></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+        <!-------------ADMIN CONTENT-->
+
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

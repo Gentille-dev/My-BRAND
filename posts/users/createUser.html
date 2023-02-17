@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---------------GOOGLE FONTS POPPINS-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,800;1,400&display=swap');
+    </style>
+
+    <!-------------CUSTOM STYLING-->
+    <link rel="stylesheet" href="../../../posts/css/admin.css">
+    <link rel="stylesheet" href="../../../posts/css/styles.css">
+
+    <title>Admin- Add Users</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text"> <span>Admin</span> Dashboard</h1>
+        </div>
+    </header>
+
+    <div class="admin-wrapper">
+
+        <!-------------LEFT SIDE BAR-->
+
+        <div class="leftside-bar">
+            <ul>
+                <li> <a href="../../posts/index-post.html"> Post Management</a> </li> <br>
+                <li> <a href="../users/index-user.html"> User Management</a> </li> <br>
+                <li> <a href="./topics/index-topic.html"> Topic Management</a> </li>
+            </ul>
+        </div>
+        <!-------------RIGHT SIDE BAR-->
+
+
+        <!-------------ADMIN CONTENT-->
+        <div class="admin-content">
+            <div class="button-group">
+                <a href="../topics/createTopics.html" class="btn-big"> Add User</a>
+                <a href="index.html" class="btn-big">Manage User</a>
+            </div>
+
+            <div class="content">
+                <h2 class="page-title">Add User</h2>
+                <br><br>
+                <form action="createPost.html" method="post">
+                    <div>
+                        <label>Username</label>
+                        <input type="text" name="username" class="text-input">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" class="text-input">
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input type="password" name="password" class="text-input">
+                    </div>
+                    <div>
+                        <label>Confirm Password </label>
+                        <input type="password" name="confPassword" class="text-input">
+                    </div>
+
+                    <div> 
+                        <label>Role</label>
+                        <select name="role" class="text-input" id="">
+                            <option value="Standard">Standard</option>
+                            <option value="Admin">Admin</option>
+                           
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-big">Add User</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-------------ADMIN CONTENT-->
+
+
+    </div>
+
+    <!-------------J QUERY-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <!-------------CKEditor-->
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
+
+    <!------------custom script-->
+    <script src="main.js"></script>
+</body>
+
+</html>

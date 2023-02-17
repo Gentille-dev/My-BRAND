@@ -1,0 +1,14 @@
+body{
+    background-color: #bfcffc ;
+}
+
+.logo{
+    background-color:  rgb(147, 164, 243);
+    color: rgb(29, 27, 27);
+    margin-top: 0px;
+    height: 60px;
+    width: 100%;
+}
+span{
+    color: rgb(235, 226, 148);
+}
