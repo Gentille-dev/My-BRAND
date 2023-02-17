@@ -20,7 +20,7 @@ body {
 
 .container {
     max-width: 500px;
-    width: 100%;
+    width: 40%;
     position: relative;
 }
 
@@ -135,7 +135,7 @@ form.active {
 .btn-submit {
     padding: 12px 0;
     display: block;
-    width: 513px;
+    width: 450px;
     color: rgb(255, 255, 255);
     border-radius: 6px;
     cursor: pointer;

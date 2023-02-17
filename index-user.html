@@ -12,10 +12,10 @@
     </style>
 
     <!-------------CUSTOM STYLING-->
-    <link rel="stylesheet" href="../posts/css/styles.css">
-    <link rel="stylesheet" href="../posts/css/admin.css">
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="./styles.css">
 
-    <title>Admin Posts</title>
+    <title>Admin users</title>
 </head>
 
 <body>
@@ -29,9 +29,9 @@
         <!-------------LEFT SIDE BAR-->
         <div class="leftside-bar">
             <ul>
-                <li> <a href="../posts/index-post.html"> Post Management</a> </li> <br>
-                <li> <a href="./users/index-user.html"> User Management</a> </li> <br>
-                <li> <a href="./users/topics/index-topic.html"> Topic Management</a> </li>
+                <li> <a href="./index-post.html"> Post Management</a> </li> <br>
+                <li> <a href="./index-user.html"> User Management</a> </li> <br>
+                <li> <a href="./index-topic.html"> Topic Management</a> </li>
             </ul>
         </div>
         <!-------------RIGHT SIDE BAR-->
@@ -41,39 +41,37 @@
         <!-------------ADMIN CONTENT-->
         <div class="admin-content">
             <div class="button-group">
-                <a href="../posts/createPost.html" class="btn-big"> Add Post</a>
-                <a href="index.html" class="btn-big">Manage Post</a>
+                <a href="./createUser.html" class="btn-big"> Add User</a>
+                <a href="./index-user.html" class="btn-big">Manage User</a>
             </div>
             <br>
-
             <div class="content">
-                <h2 class="page-title">Manage Posts</h2>
+                <h2 class="page-title">Manage Users</h2>
                 <br>
                 <table>
                     <thead>
                         <th>SN</th>
-                        <th>Title</th>
-                        <th>Creator</th>
-                        <th colspan="3">Action</th>
+                        <th>Username</th>
+                        <th>User Role</th>
+                        <th colspan="2">Action</th>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Congs, This is your first post</td>
-                            <td>Gentille M</td>
+                            <td>Gentille</td>
+                            <td>Admin</td>
                             <td > <a href="#" class="edit">Edit</a></td>
                             <td > <a href="#" class="delete">Delete</a></td>
-                            <td > <a href="#" class="post">Post</a></td>
                         </tr>
 
                         <tr>
                             <td>2</td>
-                            <td>Kuddos, This is your second post</td>
-                            <td>Olive Y</td>
+                            <td>Zayn</td>
+                            <td>Standard</td>
                             <td > <a href="#" class="edit">Edit</a></td>
                             <td > <a href="#" class="delete">Delete</a></td>
-                            <td > <a href="#" class="post">Post</a></td>
                         </tr>
+
                     </tbody>
                 </table>
             </div>
