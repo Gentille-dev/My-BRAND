@@ -22,6 +22,7 @@
     <header>
         <div class="logo">
             <h1 class="logo-text"> <span>Admin</span> Dashboard</h1>
+            
         </div>
     </header>
 
@@ -37,11 +38,10 @@
         <!-------------RIGHT SIDE BAR-->
 
 
-
         <!-------------ADMIN CONTENT-->
         <div class="admin-content">
             <div class="button-group">
-                <a href="./createPost.html" class="btn-big"> Add Post</a>
+                <a href="./manage-post.html" class="btn-big"> Add Post</a>
                 <a href="./index-post.html" class="btn-big">Manage Post</a>
             </div>
 
@@ -58,13 +58,15 @@
                         <label>Body</label>
                         <textarea name="body" id="body" cols="30" rows="10"></textarea>
                     </div>
+
                     <div>
-                        <label for="">Image</label>
+                        <label for="image">Image</label>
                         <input type="file" name="image" class="text-input" id="">
                     </div>
+
                     <div> 
                         <label>Topic</label>
-                        <select name="topic" class="text-input" id="">
+                        <select name="topic" class="text-input" id="topic">
                             <option value="Technology">Technology</option>
                             <option value="Art">Music</option>
                             <option value="Discoveries">Discoveries</option>
@@ -73,7 +75,7 @@
                     </div>
                 
                     <div>
-                        <button type="submit" class="btn-big">Upload Post</button>
+                        <button type="submit" class="btn-big">Post</button>
                     </div>
                 </form>
             </div>
@@ -97,4 +99,4 @@
     <script src="main.js"></script>
 </body>
 
-</html>
+</html>  
