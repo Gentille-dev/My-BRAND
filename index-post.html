@@ -10,17 +10,19 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
     </style>
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-------------CUSTOM STYLING-->
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./admin.css">
+   
 
     <title>Admin Posts</title>
 </head>
 
 <body>
     <header>
-        <div class="logo">
+        <div class="logo" >
             <h1 class="logo-text"> <span>Admin</span> Dashboard</h1>
             <a href="./index.html"><i class='bx bxs-dashboard'></i></a>
         </div>
@@ -30,20 +32,25 @@
         <!-------------LEFT SIDE BAR-->
         <div class="leftside-bar">
             <ul>
-                <li> <a href="./index-post.html"> Post Management</a> </li> <br>
-                <li> <a href="./index-user.html"> User Management</a> </li> <br>
-                <li> <a href="./index-topic.html"> Topic Management</a> </li>
+                
+                <li> <a href="./manage-user.html">Manage User</a> </li> <br>
+                <li> <a href="./add-blog.html">Manage Blogs</a> </li>
+                <br><br><br>
+                <a href="./index.html" style="--i:8;"><i class='bx bxs-home-alt-2'></i></a>
+                <br><br><br>
+                <a href="./login.html" style="--i:8;"><i class='bx bxs-log-out'></i></a>
             </ul>
         </div>
         <!-------------RIGHT SIDE BAR-->
 
 
 
-        <!-------------ADMIN CONTENT-->
+  
         <div class="admin-content">
             <div class="button-group">
-                <a href="./createPost.html" class="btn-big"> Add Post</a>
-                <a href="./index-post.html" class="btn-big">Manage Post</a>
+                <a href="./add-blog.html" class="btn-big">Add Blog</a>
+                <a href="./manage-user.html" class="btn-big">Add User</a>
+                
             </div>
             <br>
 
@@ -87,7 +94,7 @@
 
     </div>
 
-    <script src="main.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
