@@ -1,5 +1,6 @@
 header{
-    background: rgb(0, 7, 7);
+    background: rgb(207, 225, 245);
+    color: rgb(49, 47, 47);
     height: 60px;
 }
 .admin-wrapper{
@@ -10,13 +11,13 @@ header{
 flex: 3;
 height: 600px;
 border: 2px solid rgb(226, 218, 169);
-background: rgb(147, 166, 252);
+background: rgb(138, 149, 167);
 }
 .admin-wrapper .leftside-bar ul{
     list-style: none;
     margin: 20px;
     padding: 20px;
-    color: rgb(226, 222, 222);
+    color: rgb(252, 251, 251);
 }
 .admin-wrapper .leftside-bar ul li a {
     padding: 10px;
@@ -28,7 +29,7 @@ background: rgb(147, 166, 252);
     border-bottom:  1px solid rgb(120, 129, 211);
 }
 .admin-wrapper .leftside-bar ul li a:hover {
-    background: rgb(95, 95, 228);
+    background: rgb(185, 188, 192);
 }
 .admin-wrapper .admin-content{
     flex: 8;

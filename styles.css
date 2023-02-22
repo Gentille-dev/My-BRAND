@@ -1,14 +1,17 @@
 body{
-    background-color: #bfcffc ;
+    background: rgb(228, 232, 238);
+    color: rgb(19, 18, 18);
+    font-size: 15px;
+font-family: monospace;
 }
 
 .logo{
-    background-color:  rgb(147, 164, 243);
-    color: rgb(29, 27, 27);
+    background: rgb(132, 142, 170);
+    color: rgb(255, 254, 253);
     margin-top: 0px;
     height: 60px;
     width: 100%;
 }
 span{
-    color: rgb(180, 48, 8);
+    color: rgb(211, 166, 135);
 }

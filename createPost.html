@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---------------GOOGLE FONTS POPPINS-->
+    <!---------------GOOGLE FONTS POPPINS-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!-------------CUSTOM STYLING-->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./admin.css">
+
+    <title>Admin- Add Posts</title>
+</head>
+<style>
+    img {
+        height: 120px;
+        border-radius: 10px;
+        box-shadow: 0 0 1.2rem rgb(119, 119, 247);
+        margin: 15px;
+    }
+
+    .form-group button {
+        height: 30px;
+        width: 100px;
+        outline: none;
+        border: 1px solid rgb(18, 36, 136);
+        background: rgb(100, 194, 155);
+        padding: 0.6rem 1.2rem;
+        color: rgb(12, 12, 12);
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        border-radius: 10px;
+        transition: .4s;
+
+    }
+    button{
+        height: 30px;
+        width: 100px;
+        outline: none;
+        border: 1px solid rgb(18, 36, 136);
+        background: rgb(226, 83, 83);
+        padding: 0.6rem 1.2rem;
+        color: rgb(12, 12, 12);
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        border-radius: 10px;
+        transition: .4s;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text"> <span>Admin</span> Dashboard</h1>
+
+        </div>
+    </header>
+
+    <div class="admin-wrapper">
+        <!-------------LEFT SIDE BAR-->
+        <div class="leftside-bar">
+            <ul>
+                <li> <a href="./createTopics.html">Add User</a> </li> <br>
+                <li> <a href="./createPost.html">Add Blog</a> </li> <br> <br>
+                <br> <br>
+                <br> <br>
+                <br> <br>
+                <br> <br>
+                <a href="./index.html" style="--i:8;"><i class='bx bxs-home-alt-2'>Homepage</i></a>
+                <br><br>
+                <a href="./login.html" style="--i:8;"><i class='bx bxs-log-out'>Logout</i></a>
+
+            </ul>
+        </div>
+        <!-------------RIGHT SIDE BAR-->
+
+
+        <!-------------ADMIN CONTENT-->
+        <div class="admin-content">
+            <div class="container">
+
+                <h1 style="text-align: center;">Manage Blogs</h1>
+                <br><br>
+                <form id="form" enctype="multipart/form-data" method="post">
+                    <div class="form-group">
+                        <input type="file" class="form-control" id="image">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Upload</button>
+                    </div>
+                </form>
+                <button onclick="remove()" class="btn btn-danger">Remove</button>
+                <div id="result"></div>
+            </div>
+
+        </div>
+
+
+        <!-------------ADMIN CONTENT-->
+    </div>
+
+    <!-------------J QUERY-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <!-------------CKEditor-->
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
+
+    <!------------custom script-->
+    <script src="./add-blog.js"></script>
+</body>
+
+</html>

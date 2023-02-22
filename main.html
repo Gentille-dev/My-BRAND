@@ -20,11 +20,20 @@
     <title>Admin Posts</title>
 </head>
 
+<style>
+    img{
+        height: 150px;
+        border-radius: 10px;
+        box-shadow: 0 0 1.2rem rgb(119, 119, 247);
+        margin: 15px;
+    }
+</style>
+
 <body>
     <header>
         <div class="logo" >
             <h1 class="logo-text"> <span>Admin</span> Dashboard</h1>
-            <a href="./index.html"><i class='bx bxs-dashboard'></i></a>
+            
         </div>
     </header>
 
@@ -34,7 +43,7 @@
             <ul>
                 
                 <li> <a href="./manage-user.html">Manage User</a> </li> <br>
-                <li> <a href="./add-blog.html">Manage Blogs</a> </li>
+                <li> <a href="./createPost.html">Manage Blogs</a> </li>
                 <br><br><br>
                 <a href="./index.html" style="--i:8;"><i class='bx bxs-home-alt-2'></i></a>
                 <br><br><br>
@@ -43,55 +52,16 @@
         </div>
         <!-------------RIGHT SIDE BAR-->
 
-
-
-  
         <div class="admin-content">
             <div class="button-group">
                 <a href="./add-blog.html" class="btn-big">Add Blog</a>
-                <a href="./manage-user.html" class="btn-big">Add User</a>
+                <!----------<a href="./manage-user.html" class="btn-big">Add User</a> ---->
+                <a href="./createPost.html" class="btn-big">Add User</a>
                 
             </div>
             <br>
 
-            <div class="content">
-                <h2 class="page-title">Manage Posts</h2>
-                <br>
-                <table>
-                    <thead>
-                        <th>SN</th>
-                        <th>Title</th>
-                        <th>Creator</th>
-                        <th colspan="3">Action</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Congs, This is your first post</td>
-                            <td>Gentille M</td>
-                            <td > <a href="#" class="edit">Edit</a></td>
-                            <td > <a href="#" class="delete">Delete</a></td>
-                            <td > <a href="#" class="post">Post</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>Kuddos, This is your second post</td>
-                            <td>Olive Y</td>
-                            <td > <a href="#" class="edit">Edit</a></td>
-                            <td > <a href="#" class="delete">Delete</a></td>
-                            <td > <a href="#" class="post">Post</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
-
-
         <!-------------ADMIN CONTENT-->
-
-
     </div>
 
     <script src="./script.js"></script>
