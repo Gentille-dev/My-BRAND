@@ -14,22 +14,12 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
     
-        <nav class="navbar">
-            <a href="./index.html" style="--i:1;" class="active">Home</a>
-            <a href="#" style="--i:2;">About</a>
-            <a href="./skills.html" style="--i:3;">Skills</a>
-            <a href="./portfolio.html" style="--i:4;">Portfolio</a>
-            <a href="./blogs.html" style="--i:5;">Blogs</a>
-            <a href="#" style="--i:6;">Contact</a>
-        </nav>
-    </header>
-    <br><br> <br><br> <br><br> <br><br>
+    <br><br> <br><br> 
     <main>
-        <h2>SIGNUP FORM</h2>
+       
         <form role="form" onsubmit="signUp(event);" autocomplete="off">
+            <h2>Sign Up</h2>
         <div class="form-group">
             <input type="text" name="fname" id="fname" placeholder="Enter first name">
         </div>
@@ -45,8 +35,9 @@
         <div class="form-group">
             <button type="submit">Sign Up</button>
         </div>
+        <p>Have an account already? <a href="./signin.html">Sign In</a></p>
     </form>
-    <p>Have an account already? <a href="./signin.html">Sign In</a></p>
+    
     </main>
 
     <script src="./signup.js"></script>

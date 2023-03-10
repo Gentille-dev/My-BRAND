@@ -1,6 +1,6 @@
 header{
     background: rgb(207, 225, 245);
-    color: rgb(49, 47, 47);
+    color: rgb(224, 18, 18);
     height: 60px;
 }
 .admin-wrapper{
@@ -10,31 +10,31 @@ header{
 .admin-wrapper .leftside-bar{
 flex: 3;
 height: 600px;
-border: 2px solid rgb(226, 218, 169);
-background: rgb(138, 149, 167);
+border: 2px solid rgb(241, 239, 237);
+background: rgb(3, 3, 44);
 }
 .admin-wrapper .leftside-bar ul{
     list-style: none;
     margin: 20px;
     padding: 20px;
-    color: rgb(252, 251, 251);
+    color: rgb(250, 248, 248);
 }
 .admin-wrapper .leftside-bar ul li a {
     padding: 10px;
     text-decoration: none;
-    color: #1d0435;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 300;
     display: block;
-    border-bottom:  1px solid rgb(120, 129, 211);
+    border-bottom:  1px solid rgb(252, 253, 253);
 }
 .admin-wrapper .leftside-bar ul li a:hover {
-    background: rgb(185, 188, 192);
+    background: rgb(46, 53, 73);
 }
 .admin-wrapper .admin-content{
     flex: 8;
     height: 600px;
-    border: 2px solid rgb(86, 44, 110);
+    border: 2px solid rgb(230, 229, 235);
     padding: 40px 80px 80px;
     overflow-y: scroll;
     }
@@ -43,14 +43,14 @@ background: rgb(138, 149, 167);
         height: 40px;
         width: 100px;
         background-color: rgb(147, 184, 248);
-        color: rgb(53, 46, 46);
+        color: rgb(218, 8, 8);
         border-radius: 5px;
     }
 
     .admin-content .page-title{
         text-align: center;
         margin-bottom: 20px;
-        color: rgb(26, 24, 48);
+        color: rgb(30, 11, 236);
     }
     table{
         width: 100%;
@@ -60,7 +60,7 @@ background: rgb(138, 149, 167);
     th, td{
         padding: 15px;
         text-align: left;
-        border-bottom: 2px solid rgb(103, 132, 175);
+        border-bottom: 2px solid rgb(6, 69, 245);
     }
     .edit{
         color: rgb(10, 204, 98);
