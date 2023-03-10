@@ -1,6 +1,6 @@
-const signUp = e => {
-    let fname = document.getElementById('fname').value,
-        lname = document.getElementById('lname').value,
+/* const signUp = e => {
+    let fullname = document.getElementById('fullname').value,
+       
         email = document.getElementById('email').value,
         pwd = document.getElementById('pwd').value;
 
@@ -37,3 +37,65 @@ function signIn(e) {
     }
     e.preventDefault();
 }
+*/
+
+
+
+
+
+///INTEGRATION PART
+const form = document.getElementById("login-form");
+
+// add event listener to the form
+
+form.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    // grab input valuea
+
+    const fullname = document.getElementById("fullname").value
+    const email = document.getElementById("email").value
+    const password = document.getElementById("pwd").value
+
+    const data = { fullname, email, password }
+    console.log(data)
+
+
+// use fetch ethod to interact with signup API endpoint
+
+
+    fetch('https://stormy-wig-moth.cyclic.app//api/v1/signup',
+        {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+
+        .then((response) => {
+            return response.json()
+        })
+        .then((data) => {
+            console.log(data)
+            if (data.ok) {
+           console.log(data)
+
+            //set items in local storage
+
+            localStorage.setItem("authToken", data.token)
+
+            location.href = "/signin.html"
+            }
+            else {
+                alert(data.message)
+            }
+        })
+        .catch(Error= alert(Error))
+
+});
+
+
+
+

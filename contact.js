@@ -5,6 +5,18 @@ function contactForm(){
     var message = document.getElementById("message").value;
     var error_message = document.getElementById("error_message");
 
+
+    // intregation part 
+ // have value in one object
+
+
+
+
+
+
+
+
+
 var text;
 if(username.lenght <5){
   text= "please enter a valid name";
