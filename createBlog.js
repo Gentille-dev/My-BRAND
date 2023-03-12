@@ -1,11 +1,11 @@
 
 const form = document.getElementById("create-blog")
 
-//add event listener to the form
-
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-
+    //const tokenValue =localStorage.getItem('token')
+    // const token = JSON.parse(tokenValue)
+    //console.log()
     // grab input values
 
     const title = document.getElementById("title").value
@@ -30,7 +30,8 @@ form.addEventListener("submit", (event) => {
 
     method: "POST",
     headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+       // "Authorization": token
     },
     body: JSON.stringify(data)
     
@@ -38,11 +39,13 @@ form.addEventListener("submit", (event) => {
     .then((response) => {
         return response.json() 
     })
+
     .then((data) => {
+        console.log(data)
     if(data.ok) {
         alert(data.message)
     } else{
-        alert(data.error.title)
+        alert(data.error)
     } 
     })
     .catch(error => alert(error))

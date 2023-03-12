@@ -26,24 +26,10 @@ form.addEventListener("submit", (event) => {
         message
     })
 
-
     const data = { fullname, email, message };
 
-    //reset button work
-    resetBtn.addEventListener('click', (e) => {
-        let fullname = document.getElementById('fullname');
-        let email = document.getElementById('email');
-        let message = document.getElementById('message');
-    })
 
-    // send button work
-    sendBtn.addEventListener('click', (e) => {
-        let name = document.getElementById('name');
-        let email = document.getElementById('email');
-        let message = document.getElementById('message');
-
-
-        fetch('http://localhost:4000/api/v1/message',
+        fetch('http://127.0.0.1:4000/api/v1/message',
             {
                 method: "POST",
                 headers: {
@@ -63,4 +49,3 @@ form.addEventListener("submit", (event) => {
             })
             .catch(error => alert(error))
     });
-});

@@ -1,65 +1,85 @@
-const blogTable = document.getElementById("blog-table")
+
+//function getBlogs(blogs) {
+
+let form = document.getElementById("blog-table")
+console.log("faustin")
+// blogTable.addEventListener("submit", (event) => {
+//     event.preventDefault();
 
 // interacting with our getblogs endpoint
 
 fetch('http://127.0.0.1:4000/api/v1/blogs')
-.then((response) => response.json())
-.then((blogs) => {
-    console.log(blogs)
-    blogs.data.forEach(blog => {
+    .then((response) => response.json())
+    .then((blogs) => {
 
-        const row = document.createElement("tr")
-        const titleCell = document.createElement("td")
-        const descriptionCell = document.createElement("td")
-        const authorCell = document.createElement("td")
-        const imageUrlCell = document.createElement("td")
-        const actionsCell = document.createElement("td")
+        console.log(blogs)
+        blogs.data.forEach(blog => {
+
+            const row = document.createElement("tr")
+            const titleCell = document.createElement("td")
+            const descriptionCell = document.createElement("td")
+            const authorCell = document.createElement("td")
+            const imageUrlCell = document.createElement("td")
+            const actionsCell = document.createElement("td")
+
+            const deleteButton = document.createElement("button")
+
+            // assign values to the cells
+
+            titleCell.textContent = blog.title;
+            descriptionCell.textContent = blog.description;
+            authorCell.textContent = blog.author;
+            imageUrlCell.textContent = blog.imageUrl;
+            deleteButton.textContent = "Remove"
 
 
+            actionsCell.appendChild(deleteButton)
 
-        const deleteButton = document.createElement("button")
+            //append rows
 
-        // assign values to the cells
+            row.appendChild(titleCell)
+            row.appendChild(descriptionCell)
+            row.appendChild(authorCell)
+            row.appendChild(imageUrlCell)
+            row.appendChild(actionsCell)
 
-        titleCell.textContent = blog.title;
-        descriptionCell.textContent = blog.description;
-        authorCell.textContent = blog.author;
-        imageUrlCell.textContent = blog.imageUrl;
-        deleteButton.textContent = "Remove"
+            // append table body
 
+            form.querySelector("tbody").appendChild(row)
 
-        actionsCell.appendChild(deleteButton)
+                 deleteButton.addEventListener("click", () => {
+                    deteleBlog(blog._id)
+                 })
 
-        //append rows
-
-       row.appendChild(titleCell) 
-       row.appendChild(descriptionCell)
-       row.appendChild(authorCell)
-       row.appendChild(imageUrlCell)
-       row.appendChild(actionsCell)
-
-       // append table body
-
-       blogTable.querySelector("tbody"). 
-       appendChild(row)
-
-       deleteButton.addEventListener("click"), ()=> {
-        deteleBlog(blog._id)
-       }
-    
+        })
     })
-})
-.catch(err => alert(err))
+    .catch(err => alert(err))
 
-function deteleBlog(blogId){
-    fetch('http://127.0.0.1:4000/api/v1/blogs', 
-    {
-        method: "DELETE"
-    })
-    .then ((response) => response.json())
-    .then((data) => {
+ async function deteleBlog(blogId) {
+   await fetch(`http://127.0.0.1:4000/api/v1/blogs/${blogId}`,
+        {
+            method: "DELETE"
+        })
+    // console.log(blogId)
+    const blog = blogId
+        //.then((response) => response.json())
+        // .then((response) => {
+        //     return response.json
+        // })
+        // .then((data) => {
 
-        //fuctionalities of deleting
+        //     //fuctionalities of deleting
 
-    })
+        //     alert(data.message)
+
+        // })
+
+        Promise.all(blog)
+        .then(() => {
+            alert("blog deleted successfully")
+        })
+
+        .catch((error) => alert(error))
+        window.location.reload();
 }
+

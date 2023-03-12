@@ -57,8 +57,9 @@ form.addEventListener("submit", (e) => {
     const fullname = document.getElementById("fullname").value
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
+    const isAdmin = document.getElementById("admin").value
 
-    const data = { fullname, email, password }
+    const data = { fullname, email, password, isAdmin }
     console.log(data)
 
 

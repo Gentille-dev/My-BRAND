@@ -20,7 +20,8 @@ form.addEventListener("submit", (e) => {
     fetch('http://127.0.0.1:4000/api/v1/login', {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            
         },
         body: JSON.stringify(data)
     } )
@@ -28,16 +29,16 @@ form.addEventListener("submit", (e) => {
     .then((response) => response.json())
     .then((data) => {
         console.log(data)
-        if(data.ok) {
+        if(data.message === "logged in successfully") {
            // console.log(data)
 
             //set items in local storage
 
-           localStorage.setItem("authToken", data.token)
-location.href = ""
+           localStorage.setItem("token", data.token)
+         location.href ="./createBlog.html"
            
         }else{ 
-           alert(data.message) 
+           alert("ok") 
         }
     })
     .catch(err => alert(err))
