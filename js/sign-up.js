@@ -56,7 +56,7 @@ form.addEventListener("submit", (e) => {
 
     const fullname = document.getElementById("fullname").value
     const email = document.getElementById("email").value
-    const password = document.getElementById("pwd").value
+    const password = document.getElementById("password").value
 
     const data = { fullname, email, password }
     console.log(data)
@@ -65,11 +65,11 @@ form.addEventListener("submit", (e) => {
 // use fetch ethod to interact with signup API endpoint
 
 
-    fetch('https://stormy-wig-moth.cyclic.app//api/v1/signup',
+    fetch('http://127.0.0.1:4000/api/v1/signup',
         {
             method: "POST",
             headers: {
-                "content-type": "application/json"
+                "Content-Type": "application/json"
             },
             body: JSON.stringify(data)
         })

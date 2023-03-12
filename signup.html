@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="./signup.css">
-    <link rel="stylesheet" href="./homepage.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/homepage.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  
+
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,800;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,800;1,400&display=swap');
     </style>
 </head>
+
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-    
-        <nav class="navbar">
-            <a href="./index.html" style="--i:1;" class="active">Home</a>
-            <a href="#" style="--i:2;">About</a>
-            <a href="./skills.html" style="--i:3;">Skills</a>
-            <a href="./portfolio.html" style="--i:4;">Portfolio</a>
-            <a href="./blogs.html" style="--i:5;">Blogs</a>
-            <a href="#" style="--i:6;">Contact</a>
-        </nav>
-    </header>
-    <br><br> <br><br> <br><br> <br><br>
+
     <main>
-    
+
         <h2>SIGN UP FORM</h2>
-        <form  id ="login-form">
-        <div class="form-group">
-            <input type="text" name="fullname" id="fullname" placeholder="fullname">
-        
-        <div class="form-group">
-            <input type="email" name="email" id="email" placeholder="Enter your email">
-        </div>
-        <div class="form-group">
-            <input type="password" name="pwd" id="pwd" placeholder="Enter your password">
-        </div>
-        <div class="form-group">
-            <button type="submit">Sign Up</button>
-        </div>
-    </form>
-    <p>Have an account already? <a href="./signin.html">Sign In</a></p>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="fullname">fullname:</label>
+                <input type="text" name="fullname" id="fullname" placeholder="fullname" required>
+
+                <div class="form-group">
+                    <label for="email">email:</label>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">password:</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+        </form>
+        <p>Have an account already? <a href="./signin.html">Sign In</a></p>
     </main>
 
-    <script src="./sign-up.js"></script>
+    <script src="../js/sign-up.js"></script>
 </body>
+
 </html>

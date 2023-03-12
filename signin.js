@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
     // grab input valuea
 
     const email = document.getElementById("email").value
-    const password = document.getElementById("pwd").value
+    const password = document.getElementById("password").value
 
     const data = { email, password }
 
@@ -17,10 +17,10 @@ form.addEventListener("submit", (e) => {
 
     // use fetch ethod to interact with login API endpoint
 
-    fetch('https://stormy-wig-moth.cyclic.app//api/v1/login', {
+    fetch('http://127.0.0.1:4000/api/v1/login', {
         method: "POST",
         headers: {
-            "contet-type": "application/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
     } )
@@ -34,11 +34,11 @@ form.addEventListener("submit", (e) => {
             //set items in local storage
 
            localStorage.setItem("authToken", data.token)
-
-            location.href="/index.html"
+location.href = ""
+           
         }else{ 
            alert(data.message) 
         }
     })
-    .catch(Error => alert(Error))
+    .catch(err => alert(err))
 }); 

@@ -1,3 +1,4 @@
+
 // validate form input before adding data
 function validateForm() {
     var name = document.getElementById('name').value;
@@ -30,60 +31,6 @@ function validateForm() {
         return false;
     }
     return true;
-}
-
-//INTEGRATION PART
-fetch('http://localhost:9999/api/v1/blogs')
-.then((response) => response.json())
-.then((blogs) => {
-    console.log(blogs)
-    blogs.data.forEach(blog =>{
-        const row = document.createElement("tr");
-        const nameCell = document.createElement("td");
-        const ageCell = document.createElement("td");
-        const addressCell = document.createElement("td");
-        const emailCell = document.createElement("td");
-        const deleteButton =document. createElement("button")
-
-
-        //assign values to the cells
-
-        nameCell.textContent =blog.name;
-        ageCell.textContent = blog.age;
-        addressCell.textContent = blog.address;
-        emailCell.textContent = blog.email;
-        deleteButton.textContent =  "Remove"
-
-        actionsCell.appendChild(deleteButton)
-
-//append rows
-        row.appendChild(nameCell)
-        row.appendChild(ageCell)
-        row.appendChild(addressCell)
-        row.appendChild(emailCell)
-
-
-        // append table body
-blogTable.querySelector("tbody").appendChild(row)
-
-deleteButton.addEventListener("click", () =>{
-    deleteBlog(blog._id)
-})
-    })
-})
-.catch(err => alert(err))
-
-function deleteBlog(blogId) {
-    fetch('http://localhost:9999/api/v1/blogs', 
-    {
-        method: "DELETE"
-    })
-
-    .then((response) => response.json())
-    .then((data) => {
-
-    })
-
 }
 
 
@@ -210,3 +157,64 @@ function updateData(index) {
 }
 
 
+
+
+/*
+
+//INTEGRATION PART
+
+const userTbale = document.getElementById("")
+
+
+fetch('https://stormy-wig-moth.cyclic.app//api/v1/blogs')
+.then((response) => response.json())
+.then((blogs) => {
+    console.log(blogs)
+    blogs.data.forEach(blog =>{
+        const row = document.createElement("tr");
+        const titleCell = document.createElement("th");
+        const descriptionCell = document.createElement("th");
+        const authorCell = document.createElement("th");
+    
+
+
+        //assign values to the cells
+
+        titleCell.textContent =blog.title;
+        descriptionCell.textContent = blog.descriptionn;
+        authorCell.textContent = blog.author;
+        emailCell.textContent = blog.email;
+        deleteButton.textContent =  "Remove"
+
+        actionsCell.appendChild(deleteButton)
+
+//append rows
+        row.appendChild(nameCell)
+        row.appendChild(ageCell)
+        row.appendChild(addressCell)
+        row.appendChild(emailCell)
+
+
+        // append table body
+blogTable.querySelector("tbody").appendChild(row)
+
+deleteButton.addEventListener("click", () =>{
+    deleteBlog(blog._id)
+})
+    })
+})
+.catch(err => alert(err))
+
+function deleteBlog(blogId) {
+    fetch('http://localhost:9999/api/v1/blogs', 
+    {
+        method: "DELETE"
+    })
+
+    .then((response) => response.json())
+    .then((data) => {
+
+    })
+
+}
+*/
