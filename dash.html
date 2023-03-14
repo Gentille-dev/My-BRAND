@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="./dashboard.css">
-
-</head>
+<!-- >
 
 <body>
 
@@ -28,6 +18,133 @@
 
 
     <script src="./dash.js"></script>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---------------GOOGLE FONTS POPPINS-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,800;1,400&display=swap');
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-------------CUSTOM STYLING-->
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="./styles.css">
+   
+
+
+    <title>Manage Blogs</title>
+</head>
+
+<style>
+    .form-group-col input {
+        width: 100%;
+        outline: none;
+        border: 1px solid rgb(18, 36, 136);
+        background: none;
+        padding: 0.6rem 1.2rem;
+        color: rgb(12, 12, 12);
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        border-radius: 5px;
+        transition: .4s;
+    }
+
+    .form-control {
+        width: 810px;
+        outline: none;
+        border: 1px solid rgb(18, 36, 136);
+        background: none;
+        padding: 0.6rem 1.2rem;
+        color: rgb(12, 12, 12);
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        border-radius: 5px;
+        transition: .4s;
+    }
+
+    .column2 button {
+        margin-top: 10px;
+        height: 29px;
+        color: rgb(253, 83, 5);
+        background: rgb(61, 59, 59);
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text"><span>Admin</span>Dashboard</h1>
+        </div>
+    </header>
+
+    <div class="admin-wrapper">
+        <!-------------LEFT SIDE BAR-->
+        <div class="leftside-bar">
+            <ul>
+                <li> <a href="./createBlog.html" style="--i:8;"><i class='bx bx-upload'>Upload</i></a> </li> <br>
+                <li> <a href="#" style="--i:8;"><i class='bx bxl-blogger'>Manage Blogs</i></a> </li>
+                <br> <br>
+                <li> <a href="./dash-message.html" style="--i:8;"><i class='bx bxs-message-dots'>Message</i></a> </li>
+                <br> <br>
+                <br> <br>
+                <br> <br>
+                <br> <br>
+                <br> <br>
+                <a href="./index.html" style="--i:8;"><i class='bx bxs-home-alt-2'>Homepage</i></a>
+                <br><br>
+                <a href="./login.html" style="--i:8;"><i class='bx bxs-log-out'>Logout</i></a>
+
+            </ul>
+        </div>
+        <!-------------RIGHT SIDE BAR-->
+
+        <!-------------ADMIN CONTENT-->
+        <div class="admin-content">
+            <h2 class="at-5">Manage Blogs</h2>
+            <table id="blog-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Author</th>
+                        <th>imageUrl</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <!-------------ADMIN CONTENT-->
+
+
+        </div>
+
+        <!-------------J QUERY-->
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+        <!-------------CKEditor-->
+        <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
+
+        <!------------custom script-->
+        <script src="./dash.js"></script>
 </body>
 
 </html>

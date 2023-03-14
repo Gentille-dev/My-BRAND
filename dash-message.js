@@ -1,67 +1,72 @@
-const form = document.getElementById("messageTable")
+let form = document.getElementById("messageTable")
+console.log("message")
 //add event listener to the form
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
+// form.addEventListener("submit", (event) => {
+//     event.preventDefault();
 
 
-    // interacting with our getblogs endpoint
+// interacting with our getblogs endpoint
 
-    fetch('http://127.0.0.1:4000/api/v1/message')
-        .then((response) => response.json())
-        .then((message) => {
-            console.log(message)
-            message.data.forEach(msg => {
+fetch('http://127.0.0.1:4000/api/v1/message')
+    .then((response) => response.json())
+    .then((message) => {
 
-                const row = document.createElement("tr")
-                const fullnameCell = document.createElement("td")
-                const emailCell = document.createElement("td")
-                const messageCell = document.createElement("td")
-                const actionsCell = document.createElement("td")
+        console.log(message)
+        message.data.forEach(msg => {
 
-                const deleteButton = document.createElement("button")
+            const row = document.createElement("tr")
+            const fullnameCell = document.createElement("td")
+            const emailCell = document.createElement("td")
+            const messageCell = document.createElement("td")
+            const actionsCell = document.createElement("td")
 
-                // assign values to the cells
+            const deleteButton = document.createElement("button")
 
-                fullnameCell.textContent = msg.fullname;
-                emailCell.textContent = msg.email;
-                messageCell.textContent = msg.message;
-                deleteButton.textContent = "Remove"
+            // assign values to the cells
+
+            fullnameCell.textContent = msg.fullname;
+            emailCell.textContent = msg.email;
+            messageCell.textContent = msg.message;
+            deleteButton.textContent = "Remove"
 
 
-                actionsCell.appendChild(deleteButton)
+            actionsCell.appendChild(deleteButton)
 
-                //append rows
+            //append rows
 
-                row.appendChild(fullnameCell)
-                row.appendChild(emailCell)
-                row.appendChild(messageCell)
+            row.appendChild(fullnameCell)
+            row.appendChild(emailCell)
+            row.appendChild(messageCell)
 
-                row.appendChild(actionsCell)
+            row.appendChild(actionsCell)
 
-                // append table body
+            // append table body
 
-                messageTable.querySelector("tbody").
-                    appendChild(row)
+            form.querySelector("tbody").appendChild(row)
 
-                deleteButton.addEventListener("click"), () => {
-                    deteleMessage(msg._id)
-                }
-
+            deleteButton.addEventListener("click", () => {
+                deteleMessages(msg._id)
             })
+
         })
-        .catch(err => alert(err))
+    })
+    .catch(err => alert(err))
 
-    function deteleMessage(messageId) {
-        fetch('http://127.0.0.1:4000/api/v1/message',
-            {
-                method: "DELETE"
-            })
-            .then((response) => response.json())
-            .then((data) => {
+async function deteleMessages(messageId) {
+    await fetch(`http://127.0.0.1:4000/api/v1/message/${messageId}`,
+        {
+            method: "DELETE"
+        })
 
-                //fuctionalities of deleting
+    const message = messageId
 
-            })
-   }
-});
+    Promise.all(message)
+        .then(() => {
+            alert("comment deleted successfully")
+        })
+
+        .catch((error) => alert(error))
+    window.location.reload();
+
+}

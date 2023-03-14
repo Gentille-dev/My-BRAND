@@ -1,28 +1,4 @@
 
-
-<!-- <body>
-
-    <h1>Message</h1>
-    <table id="messageTable">
-        <thead>
-            <tr>
-                <th>fullname</th>
-                <th>email</th>
-                <th>message</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-
-    <script src="./dash-message.js"></script>
-</body>
-
-</html> -->
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +19,7 @@
     <!-------------CUSTOM STYLING-->
     <link rel="stylesheet" href="./admin.css">
     <link rel="stylesheet" href="./styles.css">
-    
+   
 
 
     <title>Manage Blogs</title>
@@ -99,9 +75,9 @@
         <div class="leftside-bar">
             <ul>
                 <li> <a href="./createBlog.html" style="--i:8;"><i class='bx bx-upload'>Upload</i></a> </li> <br>
-                <li> <a href="./dash.html" style="--i:8;"><i class='bx bxl-blogger'>Manage Blogs</i></a> </li>
+                <li> <a href="./update.html" style="--i:8;"><i class='bx bxl-blogger'>Manage Blogs</i></a> </li>
                 <br> <br>
-                <li> <a href="#" style="--i:8;"><i class='bx bxs-message-dots'>Message</i></a> </li>
+                <li> <a href="./dash-message.html" style="--i:8;"><i class='bx bxs-message-dots'>Message</i></a> </li>
                 <br> <br>
                 <br> <br>
                 <br> <br>
@@ -117,18 +93,19 @@
 
         <!-------------ADMIN CONTENT-->
         <div class="admin-content">
-            <h1>Message</h1>
-    <table id="messageTable">
-        <thead>
-            <tr>
-                <th>fullname</th>
-                <th>email</th>
-                <th>message</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+            <h2 class="at-5">Manage Blogs</h2>
+            <table id="blog-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Author</th>
+                        <th>imageUrl</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
             <!-------------ADMIN CONTENT-->
 
 
@@ -142,7 +119,7 @@
         <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
 
         <!------------custom script-->
-        <script src="./dash-message.js"></script>
+        <script src="./update.js"></script>
 </body>
 
 </html>

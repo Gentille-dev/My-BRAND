@@ -2,7 +2,7 @@
 //function getBlogs(blogs) {
 
 let form = document.getElementById("blog-table")
-console.log("faustin")
+
 // blogTable.addEventListener("submit", (event) => {
 //     event.preventDefault();
 

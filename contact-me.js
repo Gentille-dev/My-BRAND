@@ -20,11 +20,7 @@ form.addEventListener("submit", (event) => {
     const resetBtn = document.getElementById('reset');
 
 
-    console.log({
-        fullname,
-        email,
-        message
-    })
+    console.log({fullname,email,message})
 
     const data = { fullname, email, message };
 

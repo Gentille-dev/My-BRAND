@@ -42,6 +42,7 @@ form.addEventListener("submit", (event) => {
 
     .then((data) => {
         console.log(data)
+        alert("blog created successfully")
     if(data.ok) {
         alert(data.message)
     } else{
