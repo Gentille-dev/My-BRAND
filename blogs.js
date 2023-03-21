@@ -2,7 +2,7 @@
 const blogPlace=document.querySelector('.grid');
 let output='';
 
-fetch('http://127.0.0.1:4000/api/v1/blogs')
+fetch('https://stormy-wig-moth.cyclic.app/blogs')
  
 .then((response) => response.json())
 .then((blogs)=>{
@@ -23,7 +23,6 @@ fetch('http://127.0.0.1:4000/api/v1/blogs')
 
        
    </div>
-
        
        `;
     });

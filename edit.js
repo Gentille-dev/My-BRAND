@@ -5,7 +5,7 @@ var blogKeyId = sessionStorage.getItem("blogIdKey");
 showData(blogKeyId);
 
 function showData(blogKey){
-    fetch(`http://127.0.0.1:4000/api/v1/blogs/${blogKey}`)
+    fetch(`https://stormy-wig-moth.cyclic.app/blogs/${blogKey}`)
     .then((response) => response.json())
     .then((blogs)=>{
       
@@ -54,7 +54,7 @@ forms.addEventListener('submit', e =>{
     const data={title:titleValue,description:descriptionValue,author:authorValue,imageUrl:imageUrlValue};
        console.log(data);
 
-       fetch(`http://127.0.0.1:4000/api/v1/blogs/${blogKeyId}`,{
+       fetch(`https://stormy-wig-moth.cyclic.app/blogs/${blogKeyId}`,{
 
        method:"PUT",
        headers:{

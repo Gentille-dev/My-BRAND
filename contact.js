@@ -9,14 +9,6 @@ function contactForm(){
     // intregation part 
  // have value in one object
 
-
-
-
-
-
-
-
-
 var text;
 if(username.lenght <5){
   text= "please enter a valid name";

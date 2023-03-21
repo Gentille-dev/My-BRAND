@@ -25,7 +25,7 @@ form.addEventListener("submit", (event) => {
     const data = { fullname, email, message };
 
 
-        fetch('http://127.0.0.1:4000/api/v1/message',
+        fetch('https://stormy-wig-moth.cyclic.app/message',
             {
                 method: "POST",
                 headers: {
