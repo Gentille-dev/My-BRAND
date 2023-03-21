@@ -29,7 +29,7 @@ form.addEventListener("submit", (e) => {
     .then((response) => response.json())
     .then((data) => {
         console.log(data)
-        if(data.message === "logged in successfully") {
+        if(data.message === "Login successful") {
            // console.log(data)
 
             //set items in local storage
