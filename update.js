@@ -7,7 +7,7 @@ console.log("blog")
 
 // interacting with our getblogs endpoint
 
-fetch('http://127.0.0.1:4000/api/v1/blogs')
+fetch('https://stormy-wig-moth.cyclic.app/api/v1/blogs')
     .then((response) => response.json())
     .then((blogs) => {
 
@@ -66,7 +66,7 @@ fetch('http://127.0.0.1:4000/api/v1/blogs')
             updateButton.addEventListener("click", () => {
                
                let id = updateButton.getAttribute("id") 
-               location.href = `http://127.0.0.1:5500/edit.html?id=${id}`
+               location.href = `https://stormy-wig-moth.cyclic.app/edit.html?id=${id}`
                 updateBlog(blog._id)
                 
             })
@@ -87,7 +87,7 @@ fetch('http://127.0.0.1:4000/api/v1/blogs')
 
         // send a PUT or PATCH request to the server to update the blog post
         async function updateBlog(blogId, data) {
-            const response = await fetch(`http://127.0.0.1:4000/api/v1/blogs/${blogId}`, {
+            const response = await fetch(`https://stormy-wig-moth.cyclic.app/api/v1/blogs/${blogId}`, {
                 method: "PUT", // or "PATCH"
                 headers: {
                     "Content-Type": "application/json",

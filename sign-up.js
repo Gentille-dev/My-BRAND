@@ -66,7 +66,7 @@ form.addEventListener("submit", (e) => {
 // use fetch ethod to interact with signup API endpoint
 
 
-    fetch('https://stormy-wig-moth.cyclic.app/signup',
+    fetch('https://stormy-wig-moth.cyclic.app/api/v1/signup',
         {
             method: "POST",
             headers: {
@@ -93,8 +93,7 @@ form.addEventListener("submit", (e) => {
                 alert(data.message)
             }
         })
-        .catch(error => 
-            console.log(error))
+        .catch(err => alert(err))
 
         });
 

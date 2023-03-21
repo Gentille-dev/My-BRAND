@@ -2,7 +2,7 @@
 const blogPlace=document.querySelector('.grid');
 let output='';
 
-fetch('https://stormy-wig-moth.cyclic.app/blogs')
+fetch('https://stormy-wig-moth.cyclic.app/api/v1/blogs')
  
 .then((response) => response.json())
 .then((blogs)=>{

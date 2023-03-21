@@ -17,7 +17,7 @@ form.addEventListener("submit", (e) => {
 
     // use fetch ethod to interact with login API endpoint
 
-    fetch('https://stormy-wig-moth.cyclic.app/login', {
+    fetch('https://stormy-wig-moth.cyclic.app/api/v1/login', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

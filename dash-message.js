@@ -8,7 +8,7 @@ console.log("message")
 
 // interacting with our getblogs endpoint
 
-fetch('https://stormy-wig-moth.cyclic.app/message')
+fetch('https://stormy-wig-moth.cyclic.app/api/v1/message')
     .then((response) => response.json())
     .then((message) => {
 
@@ -54,7 +54,7 @@ fetch('https://stormy-wig-moth.cyclic.app/message')
     .catch(err => alert(err))
 
 async function deteleMessages(messageId) {
-    await fetch(`https://stormy-wig-moth.cyclic.app/message/${messageId}`,
+    await fetch(`https://stormy-wig-moth.cyclic.app/api/v1/message/${messageId}`,
         {
             method: "DELETE"
         })

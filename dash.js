@@ -8,7 +8,7 @@ let form = document.getElementById("blog-table")
 
 // interacting with our getblogs endpoint
 
-fetch('https://stormy-wig-moth.cyclic.app/blogs')
+fetch('https://stormy-wig-moth.cyclic.app/api/v1/blogs')
     .then((response) => response.json())
     .then((blogs) => {
 
@@ -67,7 +67,7 @@ fetch('https://stormy-wig-moth.cyclic.app/blogs')
     .catch(err => alert(err))
 
  async function deteleBlog(blogId) {
-   await fetch(`https://stormy-wig-moth.cyclic.app/blogs/${blogId}`,
+   await fetch(`https://stormy-wig-moth.cyclic.app/api/v1/blogs/${blogId}`,
         {
             method: "DELETE"
         })

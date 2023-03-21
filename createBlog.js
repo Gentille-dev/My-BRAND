@@ -26,7 +26,7 @@ form.addEventListener("submit", (event) => {
 
 
     //interaction with API enndpoint
-    fetch('https://stormy-wig-moth.cyclic.app/blogs', {
+    fetch('https://stormy-wig-moth.cyclic.app/api/v1/blogs', {
 
     method: "POST",
     headers: {
