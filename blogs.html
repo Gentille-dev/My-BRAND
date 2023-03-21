@@ -12,6 +12,7 @@
     </style>
     <link rel="stylesheet" href="./blogs.css">
     <link rel="stylesheet" href="./homepage.css">
+    <link rel="stylesheet" href="./comment.css">
     <title>Blogs</title>
 </head>
 
@@ -24,14 +25,14 @@
             <a href="./skills.html" style="--i:3;">Skills</a>
             <a href="./portfolio.html" style="--i:4;">Portfolio</a>
             <a href="#" style="--i:5;"><span class="blo">Blogs</span></a>
-            <a href="./contact.html" style="--i:6;">Contact</a>
+            <a href="./contact-me.html" style="--i:6;">Contact</a>
         </nav>
     </header>
 
     <br><br>
     <div class="container">
         <div class="grid">
-            <div class="card">
+            <!-- <div class="card">
                 <div class="card-img">
                     <img src="../../../images/ai-importance.jpg" alt="">
                 </div>
@@ -55,23 +56,71 @@
                     <p class="card-author">By <a href="#" class="author-link">Keke Ruby</a></p>
                     <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjAsOKF6Kb9AhWJiNUKHfsbCMkYABABGgJ3cw&ohost=www.google.com&cid=CAESbOD2KU2rux_qTiAUp8EclUF0TBwVb2i26Mur07Ey1lY0dUyBpXQ8lMgDlRLUs_xCo8I9mloDSNzwUZYb_ZcnYmdkehPeRl1or40spgFfGnM3Q_jck_A7By_Nlj4dOmfxUe7JzNkarcUAU-9yVw&sig=AOD64_2X_ZRQloagjo3-9CRP3CHxca8VoQ&q&adurl&ved=2ahUKEwjDl92F6Kb9AhUDYKQEHRjsCoEQ0Qx6BAgJEAE" class="read-more">Read article</a>
                 </div>
-            </div>
+            </div> -->
+        </div>
+ 
+    </div>
 
-            <div class="card">
-                <div class="card-img">
-                    <img src="../../../images/psyco-book.jpg" alt="">
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">New Trending Psycho Book</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fuga quod maxime, nobis deleniti quaerat sint dolores.</p>
-                    <p class="card-author">By <a href="#" class="author-link">Richard Ishimwe</a></p>
-                    <a href="https://en.wikipedia.org/wiki/Psycho_(novel)" class="read-more">Read article</a>
-                </div>
-            </div>
 
+    <div class="container center__display">
+        <h3>Leave a Comment</h3>
+        <!-- <div class="top"> -->
+            <!-- <div class="video__container"> -->
+
+                <!-- <video width="800" height="450" controls>
+                    <source src="video.mp4">
+                </video> -->
+
+               
+                <form>
+                    <div class="heart__icon center__display">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="form__info center__display">
+                        <input type="text" name="user" id="user" placeholder="Your username">
+                        <input type="text" name="comment" id="comment" placeholder="leave Your comment">
+                    </div>
+
+                    <button type="submit" class="submit__btn">
+                        Send
+                    </button>
+                </form>
+                
+                <!-- <div class="likes__count">
+                    <i class="far fa-heart"></i>
+                    <small class="count">0</small>
+                </div>
+            </div> -->
+        <!-- </div> -->
+        
+
+        <div class="comments__container center__display">
+            <!-- <div class="comment__card">
+                <div class="pic center__display">
+                    A
+                </div>
+                <div class="comment__info">
+                    <small class="nickname">
+                        UserNameHere
+                    </small>
+                    <p class="comment">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, in magnam! Libero?
+                    </p>
+                    <div class="comment__bottom">
+                        <div class="heart__icon--comment">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <button>
+                            Reply
+                        </button>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
+    <script src="comment.js"></script>
+
+    <script src="blogs.js"></script>
 
 </body>
 

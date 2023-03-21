@@ -23,6 +23,7 @@ fetch('http://127.0.0.1:4000/api/v1/blogs')
             const actionsCell = document.createElement("td")
 
             const deleteButton = document.createElement("button")
+            const editButton = document.createElement("button")
 
             // assign values to the cells
 
@@ -30,10 +31,12 @@ fetch('http://127.0.0.1:4000/api/v1/blogs')
             descriptionCell.textContent = blog.description;
             authorCell.textContent = blog.author;
             imageUrlCell.textContent = blog.imageUrl;
-            deleteButton.textContent = "Remove"
+            deleteButton.textContent = "Remove";
+            editButton.textContent = "Edit"
 
 
             actionsCell.appendChild(deleteButton)
+            actionsCell.appendChild(editButton)
 
             //append rows
 
@@ -50,6 +53,14 @@ fetch('http://127.0.0.1:4000/api/v1/blogs')
                  deleteButton.addEventListener("click", () => {
                     deteleBlog(blog._id)
                  })
+
+    editButton.addEventListener("click",()=>{
+    //   editBlog(blog._id);
+      var blogId = blog._id;
+      sessionStorage.setItem("blogIdKey", blogId);
+
+       window.location = './edit.html'
+   });
 
         })
     })
